@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: blanchedalmond;
+}
+
+
+
+header {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+h1 {
+  margin: 0;
+}
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.session {
+  background-color: wheat;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.session h2 {
+  margin-top: 0;
+}
+.session p {
+  margin-bottom: 10px;
+}
+.progress {
+  height: 20px;
+  margin-bottom: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 8px;
+}
+.progress-label {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.option {
+  text-align: center;
+}
+.option img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+.option button {
+  margin-top: 10px;
+}
+.course {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.course h3 {
+  margin-top: 0;
+}
+.course p {
+  margin-bottom: 10px;
+}
+.course button {
+  margin-top: 10px;
+}

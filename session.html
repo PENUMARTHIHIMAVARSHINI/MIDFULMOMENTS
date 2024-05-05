@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAPPY SOUL</title>
+ 
+  <link rel="stylesheet" href="style7.css">
+  <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body>
+  
+    <video autoplay loop play-inline muted class="back-video">
+        <source src="v5.mp4" type="video/mp4">
+    </video>
+      <header>
+        <h1>Meditation and Breathing Exercises Online Sessions</h1>
+      </header>
+      <div class="container">
+        <div class="session">
+          <h2>Session 1: Introduction to Meditation</h2>
+          <p>Join us for an introductory session to learn the basics of meditation and its benefits.</p>
+          <p>Date: April 5th, 2024</p>
+          <p>Time: 10:00 AM (UTC)</p>
+          <div class="timer" id="timer1"></div>
+          <button onclick="toggleForm('1')">Register Now</button>
+          <div class="register-form" id="registerForm1">
+            <input type="text" class="form-control" placeholder="Your Name">
+            <input type="email" class="form-control" placeholder="Your Email">
+            <input type="submit" class="btn btn-primary" value="Register">
+          </div>
+        </div>
+        <div class="session">
+          <h2>Session 2: Guided Breathing Exercises</h2>
+          <p>Relax and rejuvenate with guided breathing exercises aimed at reducing stress and improving focus.</p>
+          <p>Date: April 7th, 2024</p>
+          <p>Time: 3:00 PM (UTC)</p>
+          <div class="timer" id="timer2"></div>
+          <button onclick="toggleForm('2')">Register Now</button>
+          <div class="register-form" id="registerForm2">
+            <input type="text" class="form-control" placeholder="Your Name">
+            <input type="email" class="form-control" placeholder="Your Email">
+            <input type="submit" class="btn btn-primary" value="Register">
+          </div>
+        </div>
+        <div class="session">
+          <h2>Session 3: Mindful Movement</h2>
+          <p>Engage in gentle movements combined with mindful breathing to promote relaxation and awareness.</p>
+          <p>Date: April 10th, 2024</p>
+          <p>Time: 12:00 PM (UTC)</p>
+          <div class="timer" id="timer3"></div>
+          <button onclick="toggleForm('3')">Register Now</button>
+          <div class="register-form" id="registerForm3">
+            <input type="text" class="form-control" placeholder="Your Name">
+            <input type="email" class="form-control" placeholder="Your Email">
+            <input type="submit" class="btn btn-primary" value="Register">
+          </div>
+        </div>
+        <div class="session">
+          <h2>Session 4: Deep Relaxation Techniques</h2>
+          <p>Learn deep relaxation techniques to release tension and promote a sense of calm and well-being.</p>
+          <p>Date: April 15th, 2024</p>
+          <p>Time: 5:00 PM (UTC)</p>
+          <div class="timer" id="timer4"></div>
+          <button onclick="toggleForm('4')">Register Now</button>
+          <div class="register-form" id="registerForm4">
+            <input type="text" class="form-control" placeholder="Your Name">
+            <input type="email" class="form-control" placeholder="Your Email">
+            <input type="submit" class="btn btn-primary" value="Register">
+          </div>
+        </div>
+        <div class="course">
+          <h2>Course 1: Mindfulness Meditation</h2>
+          <p>Learn the art of mindfulness meditation with this comprehensive online course.</p>
+          <p>Duration: 4 weeks</p>
+          <p>Start Date: April 10th, 2024</p>
+          <button>Enroll Now</button>
+        </div>
+        <div class="course">
+          <h2>Course 2: Breathing Techniques Mastery</h2>
+          <p>Master various breathing techniques to improve your mental and physical well-being.</p>
+          <p>Duration: 6 weeks</p>
+          <p>Start Date: April 15th, 2024</p>
+          <button>Enroll Now</button>
+        </div>
+        <div class="course">
+          <h2>Course 3: Yoga for Stress Relief</h2>
+          <p>Explore yoga practices specifically designed to reduce stress and promote relaxation.</p>
+          <p>Duration: 8 weeks</p>
+          <p>Start Date: April 20th, 2024</p>
+          <button>Enroll Now</button>
+        </div>
+        <div class="course">
+          <h2>Course 4: Mind-Body Connection</h2>
+          <p>Discover the profound connection between the mind and body and how it influences your overall well-being.</p>
+          <p>Duration: 6 weeks</p>
+          <p>Start Date: April 25th, 2024</p>
+          <button>Enroll Now</button>
+        </div>
+        <div class="course">
+          <h2>Course 5: Holistic Wellness</h2>
+          <p>Embrace holistic wellness practices to nurture your mind, body, and spirit for overall health.</p>
+          <p>Duration: 10 weeks</p>
+          <p>Start Date: May 1st, 2024</p>
+          <button>Enroll Now</button>
+        </div>
+        <!-- Add more sessions and courses here -->
+      </div>
+    
+      <script>
+        // Countdown Timer
+        function getTimeRemaining(endtime) {
+          const total = Date.parse(endtime) - Date.parse(new Date());
+          const seconds = Math.floor((total / 1000) % 60);
+          const minutes = Math.floor((total / 1000 / 60) % 60);
+          const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+          const days = Math.floor(total / (1000 * 60 * 60 * 24));
+          return {
+            total,
+            days,
+            hours,
+            minutes,
+            seconds
+          };
+        }
+    
+        function initializeClock(id, endtime) {
+          const clock = document.getElementById(id);
+          const daysSpan = clock.querySelector('.days');
+          const hoursSpan = clock.querySelector('.hours');
+          const minutesSpan = clock.querySelector('.minutes');
+          const secondsSpan = clock.querySelector('.seconds');
+    
+          function updateClock() {
+            const t = getTimeRemaining(endtime);
+    
+            daysSpan.innerHTML = t.days;
+            hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+    
+            if (t.total <= 0) {
+              clearInterval(timeinterval);
+            }
+          }
+    
+          updateClock();
+          const timeinterval = setInterval(updateClock, 1000);
+        }
+    
+        const deadline1 = new Date('2024-04-05T10:00:00Z');
+        initializeClock('timer1', deadline1);
+    
+        const deadline2 = new Date('2024-04-07T15:00:00Z');
+        initializeClock('timer2', deadline2);
+    
+        const deadline3 = new Date('2024-04-10T12:00:00Z');
+        initializeClock('timer3', deadline3);
+    
+        const deadline4 = new Date('2024-04-15T17:00:00Z');
+        initializeClock('timer4', deadline4);
+    
+        // Toggle Registration Form
+        function toggleForm(sessionNumber) {
+          const registerForm = document.getElementById(`registerForm${sessionNumber}`);
+          registerForm.style.display === 'none' ? registerForm.style.display = 'flex' : registerForm.style.display = 'none';
+        }
+      </script>
+    </body>
+    </html>
+    

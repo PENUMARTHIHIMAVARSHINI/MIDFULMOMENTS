@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+body {
+    background: url("signinbackground.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure body takes up at least the full height of the viewport */
+}
+
+
+
+.signup-box {
+    position: relative;
+    width: 500px;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    text-align: center; /* Align text to center */
+    margin-top: auto; /* Push the box to the center vertically */
+    margin-bottom: auto; /* Push the box to the center vertically */
+}
+
+h1,
+h4 {
+    margin-top: 0; /* Remove default margin for better alignment */
+}
+
+form {
+    width: 100%; /* Ensure form spans the entire width of the box */
+}
+
+.input-box {
+    width: 100%; /* Ensure input fields span the entire width of the box */
+    text-align: left; /* Align text within input boxes to the left */
+    margin-bottom: 20px; /* Add some space between input boxes */
+}
+
+label {
+    display: block; /* Display labels on new lines */
+    font-size: 25px;
+    margin-bottom: 5px; /* Add some space between labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Ensure input fields span the entire width of the box */
+    padding: 5px 20px;
+    height: 30px; /* Adjust height as needed */
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+button[type="submit"] {
+    width: 100%; /* Ensure button spans the entire width of its container */
+    height: 50px;
+    margin-top: 20px;
+    border: none;
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Styling for register link */
+.register-link {
+    color: white;
+    font-size: 25px;
+    margin-top: 20px; /* Add space between the button and register link */
+}
+
+.register-link a {
+    color: red;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.register-link a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Styling for "Already have an account?" message */
+.register {
+    color: white;
+    font-size: 25px;
+    margin-top: 20px; /* Add space between register link and login message */
+}
+
+.para-2 a {
+    color: red;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.para-2 a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}

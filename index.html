@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content = "width = device-width,initial scale=1.0">
+    <title>
+    HAPPY SOUL
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<style>
+   
+   #subscribe {
+       cursor: pointer;
+   }
+   
+ 
+   .blurred {
+       filter: blur(2px); 
+   }
+</style>
+<body>
+            <nav class="sidebar">
+                <a href="index.html" target="_self" > 
+                    <img src="home.png"/>
+                 </a>
+                 <br>
+                 <a href="intro.html" target="_blank" > 
+                    <img src="reading.png"/>
+                 </a>
+                 <br>
+                 <a href="why.html" target="_blank" > 
+                    <img src="qa.png"/>
+                 </a>
+                 <br>
+
+                 <a href="session.html" target="_blank" > 
+                    <img src="guide.png"/>
+                 </a>
+                 <br>
+                 <a href="tracking.html" target="_blank" > 
+                    <img src="tracking.png"/>
+                 </a>
+                 <br>
+                 <a href="media.html" target="_blank" > 
+                    <img src="social-media.png"/>
+                 </a>
+                 <br>
+                 <a href="shopping.html" target="_blank" > 
+                    <img src="online-shopping.png"/>
+                 </a>
+                 <br>
+                 <a href="contact.html" target="_blank" > 
+                    <img src="contact.png"/>
+                 </a>
+                 <a href="aboutus.html" target="_blank" > 
+                    <img src="about-us.png"/>
+                 </a>
+                
+              </nav>
+              <div class="container">
+              <div class="more">
+                <a href="signup.html" target="_blank" > 
+                    <img src="signup.png"/>
+                 </a>
+                 <a href="login.html" target="_blank" > 
+                    <img src="log-in.png"/>
+                 </a>
+                    <img  id="subscribe" src="subscribe.png" onclick="toggleBlur();toggleSubscription()">
+
+                 </a>
+            </div>
+            </div>
+              <div class="hero">
+                <video autoplay loop play-inline muted class="back-video">
+                    <source src="v1.mp4" type="video/mp4">
+                </video>
+             <main class="content">
+                <h1> MINDFUL BLISS STUDIO</h1>
+                <br>
+                <h4> Inhale Clarity, Exhale Tension</h4>
+             </main>
+              </div>
+
+              <script>
+               function toggleBlur() {
+                   var image = document.getElementById("subscribe");
+                   
+                   image.classList.toggle("blurred");
+               }
+               function toggleSubscription() {
+            var subscribeButton = document.getElementById("subscribe");
+            if (subscribeButton.dataset.subscribed === "true") {
+                alert("You unsubscribed!");
+                subscribeButton.dataset.subscribed = "false";
+            } else {
+                alert("Thank you for subscribing! You will now receive updates.");
+                subscribeButton.dataset.subscribed = "true";
+            }
+        }
+           </script>
+    </body>
+</html>
